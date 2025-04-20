@@ -4,10 +4,10 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 
-st.set_page_config(page_title="BioVentureRx - Dynamic rNPV Explorer", layout="wide")
+st.set_page_config(page_title="BioVentureRx - Interactive rNPV Explorer", layout="wide")
 
 # Main Title
-st.title("BioVentureRx - Dynamic rNPV Explorer")
+st.title("BioVentureRx - Interactive rNPV Explorer")
 
 # Short Introduction
 st.write(
