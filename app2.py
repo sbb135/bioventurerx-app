@@ -4,18 +4,35 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 
-st.set_page_config(page_title="BioVentureRx - Dynamic rNPV Calculator", layout="wide")
+st.set_page_config(page_title="BioVentureRx - Dynamic rNPV Explorer", layout="wide")
 
-st.title(":syringe: BioVentureRx - Dynamic rNPV & Risk Flagging")
-st.write("Upload your portfolio, or explore the Entresto example.")
+# Main Title
+st.title("BioVentureRx - Dynamic rNPV Explorer")
 
+# Short Introduction
+st.write(
+    "This app was created to provide a more interactive way to explore important financial modeling work in the life sciences. "
+    "Using an illustrative case based on Entresto, as modeled by Richard Z. Xie, Tess Cameron, and Peter Kolchinsky, "
+    "this app highlights how the Inflation Reduction Act (IRA) introduces policies that could significantly affect biotech investment. "
+    "It is critical to showcase real-world examples of how early-stage innovation may be impacted."
+)
+
+# Info box giving full academic credit
 st.info(
-    ":book: Important Note: This model applies IRA impact only starting from Year 9 onwards, "
-    "based on real-world biotech valuation practices. NPV assumptions and methodology are based on "
-    "Xie RZ, Cameron T, Kolchinsky P. *The Impact of the Inflation Reduction Act on Investment in Innovative Medicines: "
-    "A Project-Level Analysis*. Therapeutic Innovation & Regulatory Science (2025). "
-    "[https://doi.org/10.1007/s43441-025-00768-0](https://doi.org/10.1007/s43441-025-00768-0)")
+    "The Entresto-based example showcased here is based on research published by Richard Z. Xie, Tess Cameron, and Peter Kolchinsky: "
+    "*The Impact of the Inflation Reduction Act on Investment in Innovative Medicines: A Project-Level Analysis*, "
+    "published in Therapeutic Innovation & Regulatory Science (2025). "
+    "The authors have made their model and findings publicly available to foster broader understanding. "
+    "This app showcases their work, and similar studies in the future, purely for educational and illustrative purposes.\n\n"
+    "**Original article link:** [https://doi.org/10.1007/s43441-025-00768-0](https://doi.org/10.1007/s43441-025-00768-0)"
+)
 
+# Formal scientific caption
+st.caption(
+    "Fig. 1: Comparison of Net Present Value (NPV) in the Pre- and Post-IRA Scenarios. "
+    "The NPV in both scenarios, and the percentage drop in NPV in the post-IRA scenario (relative to the pre-IRA scenario), "
+    "were illustrated by different investment phases."
+)
 
 # Upload CSV
 uploaded_file = st.file_uploader("Upload your Drug Portfolio CSV", type=["csv"])
