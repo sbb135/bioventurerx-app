@@ -27,13 +27,6 @@ st.info(
     "**Original article link:** [https://doi.org/10.1007/s43441-025-00768-0](https://doi.org/10.1007/s43441-025-00768-0)"
 )
 
-# Formal scientific caption
-st.caption(
-    "Fig. 1: Comparison of Net Present Value (NPV) in the Pre- and Post-IRA Scenarios. "
-    "The NPV in both scenarios, and the percentage drop in NPV in the post-IRA scenario (relative to the pre-IRA scenario), "
-    "were illustrated by different investment phases."
-)
-
 # Upload CSV
 uploaded_file = st.file_uploader("Upload your Drug Portfolio CSV", type=["csv"])
 
